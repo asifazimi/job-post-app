@@ -6,6 +6,7 @@ import AddJob from "./pages/AddJob";
 import NotFoundPage from "./pages/NotFoundPage";
 // Layout
 import MainLayout from './layouts/MainLayout.jsx';
+// import MainLayout from './layouts/MainLayout';
 
 
 const router = createBrowserRouter(
