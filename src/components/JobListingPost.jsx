@@ -1,7 +1,17 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, { useState } from 'react'
 
 const JobListingPost = ({job}) => {
+
+    const [showFullDescription, setShowFullDescription] = useState(false);
+
+    let description = job.description;
+
+
+    if(!showFullDescription) {
+        description = description.substring(0, 90) + "...";
+    } 
+ 
   return (
     <div className="bg-white rounded-xl shadow-md relative">
 
@@ -11,8 +21,10 @@ const JobListingPost = ({job}) => {
                 <h3 className="text-xl font-bold">{job.title}</h3>
             </div>
             <div className="mb-5">
-                {job.description}
+                {description}
             </div>
+
+            <button className="text-indigo-500 mb-5 hover:text-indigo-600" onClick={ () => setShowFullDescription((prevState) => !prevState)}>{showFullDescription ? "Less" : "More"}</button>
 
             <h3 className="text-indigo-500 mb-2">{job.salary} / Year</h3>
 
