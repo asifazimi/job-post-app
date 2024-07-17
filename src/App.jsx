@@ -3,8 +3,9 @@ import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider} fr
 import HomePage from "./pages/HomePage";
 import JobsPage from "./pages/JobsPage";
 import AddJob from "./pages/AddJob";
+import NotFoundPage from "./pages/NotFoundPage";
 // Layout
-import MainLayout from "./layouts/MainLayout";
+import MainLayout from './layouts/MainLayout.jsx';
 
 
 const router = createBrowserRouter(
@@ -13,6 +14,7 @@ const router = createBrowserRouter(
       <Route index element={<HomePage/>} />
       <Route path="/jobs" element={<JobsPage/>} />
       <Route path="/add-job" element={<AddJob/>} />
+      <Route path="*" element={<NotFoundPage/>} />
     </Route>
   )
 );
