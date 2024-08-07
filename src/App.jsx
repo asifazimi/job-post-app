@@ -7,7 +7,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import JobPage, {jobLoader} from "./pages/JobPage";
 import EditJob from './pages/EditJob';
 // Layout
-import MainLayout from './layouts/MainLayout';
+import MainLayout from './Layouts/MainLayout';
 
 
 
